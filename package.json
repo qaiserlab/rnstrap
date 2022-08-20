@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "android:release": "react-native run-android --variant=release",
+    "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
+    "android:clean": "cd android && ./gradlew clean && cd ..",
+    "android:release": "cd android && ./gradlew clean && cd .. && react-native run-android --variant=release",
+    "android:bundle": "cd android && ./gradlew clean && ./gradlew bundleRelease && cd ..",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
