@@ -22,7 +22,9 @@ Run Instructions
 
 Build/run Release Instructions
 
+- Create keystore command: keytool -genkeypair -v -storetype PKCS12 -keystore appname.keystore -alias appnamekey -keyalg RSA -keysize 2048 -validity 10000
 - Put your release keystore on android/app/release.keystore
+
 - Command: yarn android:release
 - Check your apk file @ android/app/build/outputs/apk/release folder
 
