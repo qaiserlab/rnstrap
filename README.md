@@ -8,6 +8,31 @@ React Native Starter
 - NPM v6.14.16
 - Yarn v1.22.19
 
+## First setup
+
+- Command: yarn install
+
+## Build/run
+
+Android
+
+Run Instructions
+
+- Command: yarn android
+
+Build/run Release Instructions
+
+- Put your release keystore on android/app/release.keystore
+- Command: yarn android:release
+- Check your apk file @ android/app/build/outputs/apk/release folder
+
+Bundle Instructions
+
+- Open application: Android Studio 
+- Open menu: Build > Select Build Variant > Choose Release
+- Open menu: Build > Build Bundle > Build Bundle
+- Check your aab file @ android/app/build/outputs/bundle/release folder
+
 ## Command logs
 
 Started with;
