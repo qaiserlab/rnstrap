@@ -1,8 +1,8 @@
-import React from "react";
-import { View } from "react-native";
-import CTextInput from "../../components/CInput/CTextInput";
-import CButton from "../../components/CButton/CButton";
-import LoginStyle from "./LoginStyle";
+import React from "react"
+import { Text, View } from "react-native"
+import CTextInput from "../../components/CInput/CTextInput"
+import CButton from "../../components/CButton/CButton"
+import LoginStyle from "./LoginStyle"
 
 export default function LoginView() {
   return (

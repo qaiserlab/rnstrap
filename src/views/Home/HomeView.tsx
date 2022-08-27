@@ -1,12 +1,13 @@
-import React from "react";
-import { Text, View } from "react-native";
-import HomeStyle from "./HomeStyle";
+import React from "react"
+import { Text, View } from "react-native"
+import { APP_NAME } from "@env"
+import HomeStyle from "./HomeStyle"
 
 export default function HomeView() {
   return (
     <React.Fragment>
       <View style={HomeStyle.container}>
-        <Text>HOME SCREEN</Text>
+        <Text style={HomeStyle.title}>Welcome to {APP_NAME}</Text>
       </View>
     </React.Fragment>
   )

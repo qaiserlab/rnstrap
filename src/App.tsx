@@ -21,12 +21,12 @@ import {
 import {
   Colors,
   DebugInstructions,
-  Header,
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen'
 
 import AppStyle from './AppStyle'
+import HomeView from './views/Home/HomeView'
 import LoginView from './views/Login/LoginView'
 
 const Section: React.FC<
@@ -72,7 +72,9 @@ const App = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        
+        <HomeView />
+
         <View
         style={{
           backgroundColor: isDarkMode ? Colors.black : Colors.white,
