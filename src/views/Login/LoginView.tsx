@@ -1,8 +1,8 @@
 import React from "react"
 import { View } from "react-native"
-import CTextInput from "../../components/CInput/CTextInput"
-import CButton from "../../components/CButton/CButton"
 import LoginStyle from "./LoginStyle"
+import UiTextInput from "../../components/TextInput/UiTextInput"
+import UiButton from "../../components/Button/UiButton"
 import apiV1 from "../../helpers/apiV1"
 
 export default function LoginView() {
@@ -17,10 +17,10 @@ export default function LoginView() {
   return (
     <React.Fragment>
       <View style={LoginStyle.container}>
-        <CTextInput placeholder="Username" />
-        <CTextInput placeholder="Password" />
+        <UiTextInput placeholder="Username" />
+        <UiTextInput placeholder="Password" />
         
-        <CButton onPress={handleLogin} title="Login" />
+        <UiButton onPress={handleLogin} title="Login" />
       </View>
     </React.Fragment>
   )
