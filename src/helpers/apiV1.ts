@@ -1,9 +1,9 @@
-import { API_HOST } from '@env'
 import axios from 'axios'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import configUrl from '../config/url'
 
 const apiV1 = axios.create({ 
-  baseURL: `${API_HOST}/v1`,
+  baseURL: `${configUrl.apiHost}/v1`,
 })
 
 apiV1.interceptors.request.use(async function (config) {
