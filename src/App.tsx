@@ -3,9 +3,11 @@
 import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import HomeView from './views/Home/HomeView'
 import LoginView from './views/Login/LoginView'
-import { View } from 'react-native'
+import HomeView from './views/Home/HomeView'
+import SettingsView from './views/Settings/SettingsView'
+import FingerIDView from './views/Settings/FingerIDView'
+import FaceIDView from './views/Settings/FaceIDView'
 
 const Stack = createNativeStackNavigator()
 
@@ -22,6 +24,9 @@ export default function App() {
             headerShown: false
           }} 
         />      
+        <Stack.Screen name="Settings" component={SettingsView} />
+        <Stack.Screen name="FingerID" component={FingerIDView} />
+        <Stack.Screen name="FaceID" component={FaceIDView} />
       </Stack.Navigator>
     </NavigationContainer>
   )
