@@ -8,6 +8,13 @@ React Native Starter
 - NPM v6.14.16
 - Yarn v1.22.19
 
+## Library Integrated
+
+- Axios
+- React Native Dot Env
+- React Native Async Storage
+- React Navigation
+
 ## First setup
 
 - Command: yarn install
