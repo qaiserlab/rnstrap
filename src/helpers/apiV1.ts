@@ -1,17 +1,29 @@
 import { API_HOST } from '@env'
 import axios from 'axios'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const apiV1 = axios.create({ 
   baseURL: `${API_HOST}/v1`,
 })
 
-apiV1.interceptors.request.use(function (config) {
+apiV1.interceptors.request.use(async function (config) {
   // Do something before request is sent
 
-  // if (localStorage.accessToken) {
-  //   const token = localStorage.accessToken
-  //   config.headers.Authorization = 'Bearer ' + token
-  // }
+  try {
+    const accessToken = await AsyncStorage.getItem('@storage_accessToken')
+    if(accessToken !== null) {
+      if (config.headers) {
+        config.headers.Authorization = 'Bearer ' + accessToken
+      }
+      else {
+        config.headers = {
+          Authorization: 'Bearer ' + accessToken
+        }
+      }
+    }
+  } catch(e) {
+    console.log(e)
+  }
 
   return config
 }, function (error) {
